@@ -1,9 +1,14 @@
 # REST API developer challenge (Node.js)
 
-# Set up
-We have included a CSV export of mock data for the domain models. You should build your API to expose this data. A markdown file describing these models is located in the data folder.
+Vue/Node app to fetch and display episodes from the tv show Silicon Valley.
 
-You do not need to include any CSV parsing in your solution.
+To run:
+
+```npm install``` in server directory
+
+```npm start``` in server directory
+
+open ```http://localhost:8081/#/``` in a browser
 
 # Challenge
 
