@@ -1,5 +1,5 @@
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('Users', {
+  up: (queryInterface, Sequelize) => queryInterface.createTable('users', {
     id: {
       allowNull: false,
       primaryKey: true,
@@ -19,9 +19,10 @@ module.exports = {
     dateOfBirth: {
       type: Sequelize.DATE,
     },
-    // type: {
-    // type: ['SUPPLIER', 'TENANT'],
-    // },
+    type: {
+      type: Sequelize.ENUM,
+      values: ['TENANT', 'SUPPLIER'],
+    },
     phone: {
       type: Sequelize.STRING,
       unique: true,
@@ -36,5 +37,5 @@ module.exports = {
     },
   }),
   // down: (queryInterface, Sequelize) => queryInterface.dropTable('Users'),
-  down: queryInterface => queryInterface.dropTable('Users'),
+  down: queryInterface => queryInterface.dropTable('users'),
 };
