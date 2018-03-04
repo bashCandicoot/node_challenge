@@ -1,6 +1,6 @@
 # REST API developer challenge (Node.js)
 
-Vue/Node app to fetch and display episodes from the tv show Silicon Valley.
+A Node server with a REST api that meets the acceptance criteria of the user stories below.
 
 To run:
 
@@ -11,8 +11,6 @@ To run:
 open ```http://localhost:8081/#/``` in a browser
 
 # Challenge
-
-The challenge is to create a REST api that meets the acceptance criteria of the user stories below.
 
 The solution must also:
 
