@@ -1,6 +1,11 @@
+const db = require('../../models/index');
+
 module.exports = (req, res) => {
-  // const allUsers = 
-  // const filteredUser = allUsers.filter(user => user.id === req.params.userId);
-  // res.status(200).json({ filteredUser });
+  db.sequelize.models.suppliers.findAll({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then(suppliers => res.status(200).json({ suppliers }));
 };
 
