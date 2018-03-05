@@ -7,6 +7,15 @@ const morgan = require('morgan');
 const Sequelize = require('sequelize');
 const routes = require('../routes');
 
+const app = express();
+
+app.use(morgan('combined'));
+app.use(bodyParser.json());
+app.use(cors());
+
+app.use('/', routes);
+app.set('port', process.env.PORT);
+
 const sequelize = new Sequelize('database', 'root', 'password', {
   host: 'localhost',
   dialect: 'sqlite',
@@ -20,21 +29,11 @@ const sequelize = new Sequelize('database', 'root', 'password', {
   storage: './database.sqlite',
 });
 
-sequelize.authenticate()
-  .then(() => {
-    console.log('Connected!');
-  })
-  .catch((err) => {
-    console.error('Unable to connect :(', err);
-  });
+sequelize
+  .authenticate()
+  .then(() => console.log('Connected!'))
+  .catch(err => console.error('Unable to connect :(', err));
 
-const app = express();
-
-app.use(morgan('combined'));
-app.use(bodyParser.json());
-app.use(cors());
-
-app.use('/', routes);
-
-app.set('port', process.env.PORT);
-app.listen(app.get('port'));
+sequelize
+  .sync()
+  .then(() => app.listen(app.get('port')));
