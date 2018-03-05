@@ -1,7 +1,7 @@
+const db = require('../../models/index');
 const Sequelize = require('sequelize');
 
 const op = Sequelize.Op;
-const db = require('../../models/index');
 
 module.exports = (req, res) => {
   db.sequelize.models.users.findAll({
