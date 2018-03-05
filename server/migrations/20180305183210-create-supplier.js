@@ -1,10 +1,10 @@
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('suppliers', {
     id: {
-      allowNull: false,
       primaryKey: true,
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
+      allowNull: false,
     },
     supplierId: {
       type: Sequelize.INTEGER,
@@ -20,7 +20,7 @@ module.exports = {
       type: Sequelize.BOOLEAN,
     },
     vatNumber: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
     },
     addressId: {
       type: Sequelize.INTEGER,
