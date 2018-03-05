@@ -2,13 +2,24 @@
 
 A Node server with a REST api that meets the acceptance criteria of the user stories below.
 
-To run:
+Setup:
 
-```npm install``` in server directory
+```cd``` to server directory
 
-```npm start``` in server directory
+```npm install``` 
 
-open ```http://localhost:8081/#/``` in a browser
+```npm start```
+
+```sequelize db:migrate```
+
+Run:
+
+Head to the following urls in a browser/Postman/Insomnia
+
+```http://localhost:8081/users```  
+```http://localhost:8081/suppliers```  
+```http://localhost:8081/reposits```  
+
 
 # Challenge
 
