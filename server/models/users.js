@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('user', {
+  const Users = sequelize.define('users', {
     id: {
       allowNull: false,
       primaryKey: true,
@@ -31,5 +31,5 @@ module.exports = (sequelize, DataTypes) => {
   //   console.log(models);
   //   // associations can be defined here
   // };
-  return User;
+  return Users;
 };
