@@ -6,6 +6,9 @@ module.exports = {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
     },
+    supplierId: {
+      type: Sequelize.INTEGER,
+    },
     name: {
       type: Sequelize.STRING,
     },
