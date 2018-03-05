@@ -1,6 +1,6 @@
-// const data = require('../../data.json');
+const db = require('../../models/index');
 
 module.exports = (req, res) => {
-  const allUsers = { hello: 'ayy' };
-  res.status(200).json({ allUsers });
+  db.sequelize.models.user.findAll()
+    .then(users => res.status(200).json({ users }));
 };
