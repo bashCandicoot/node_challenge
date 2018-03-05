@@ -6,6 +6,6 @@ module.exports = (req, res) => {
       supplierId: req.params.id,
     },
   })
-    .then(suppliers => res.status(200).json({ suppliers }));
+    .then(supplier => res.status(200).json({ supplier }));
 };
 

@@ -1,33 +1,39 @@
 module.exports = (sequelize, DataTypes) => {
   const Suppliers = sequelize.define('suppliers', {
     id: {
-      allowNull: false,
       primaryKey: true,
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
     },
     supplierId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
     name: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     type: {
       type: DataTypes.ENUM,
       values: ['PRIVATE', 'AGENCY'],
+      allowNull: false,
     },
     signedTerms: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
     },
     vatNumber: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       unique: true,
     },
     addressId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
     masterUser: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
   }, {});
   // Supplier.associate = (models) => {

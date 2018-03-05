@@ -8,12 +8,15 @@ module.exports = (sequelize, DataTypes) => {
     },
     userId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
     firstName: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     lastName: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
@@ -21,13 +24,16 @@ module.exports = (sequelize, DataTypes) => {
     },
     dateOfBirth: {
       type: DataTypes.DATE,
+      allowNull: false,
     },
     type: {
       type: DataTypes.ENUM,
       values: ['TENANT', 'SUPPLIER'],
+      allowNull: false,
     },
     phone: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   }, {});
   // User.associate = (models) => {
