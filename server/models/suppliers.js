@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: {
+          args: [0, 10],
+          msg: 'The name must be no longer than 100 characters.',
+        },
+      },
     },
     type: {
       type: DataTypes.ENUM,
@@ -26,6 +32,12 @@ module.exports = (sequelize, DataTypes) => {
     vatNumber: {
       type: DataTypes.TEXT,
       unique: true,
+      validate: {
+        len: {
+          args: [9, 12],
+          msg: 'VAT number must be between 9-12 characters.',
+        },
+      },
     },
     addressId: {
       type: DataTypes.INTEGER,

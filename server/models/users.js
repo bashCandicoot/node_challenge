@@ -13,14 +13,32 @@ module.exports = (sequelize, DataTypes) => {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: {
+          args: [0, 60],
+          msg: 'First name must be no longer than 60 characters.',
+        },
+      },
     },
     lastName: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: {
+          args: [0, 60],
+          msg: 'Last name must be no longer than 60 characters.',
+        },
+      },
     },
     email: {
       type: DataTypes.STRING,
       unique: true,
+      validate: {
+        len: {
+          args: [0, 60],
+          msg: 'Email address must be no longer than 60 characters.',
+        },
+      },
     },
     dateOfBirth: {
       type: DataTypes.DATE,
@@ -34,6 +52,12 @@ module.exports = (sequelize, DataTypes) => {
     phone: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: {
+          args: [6, 15],
+          msg: 'Phone number must be between 6-15 characters.',
+        },
+      },
     },
   }, {});
   // User.associate = (models) => {
