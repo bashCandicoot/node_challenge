@@ -1,0 +1,7 @@
+id,first_name,last_name,email,date_of_birth,type,created_at,phone
+1,Quentin,Tarantino,Tarantino@Tarantino.co.uk,04/04/1940,SUPPLIER,08/08/2014,07777777777
+2,Kevin,Smith,Smith@Smith.com,05/05/1950,TENANT,08/08/2015,07777777777
+3,Hugh,Hefner,Hefner@Hefner.com,06/06/1960,SUPPLIER,08/08/2016,07777777777
+4,Johnny,Bravo,Bravo@Bravo.com,07/09/1990,TENANT,08/08/2017,07777777777
+5,Lakeith,Stanfield,Stanfield@Stanfield.com,08/08/1980,TENANT,08/08/2018,077777777777
+6,Cara,Delevingne,Delevingne@Delevingne.co.uk,09/09/1990,SUPPLIER,08/08/2019,07777777777
