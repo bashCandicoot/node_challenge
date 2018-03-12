@@ -1,9 +1,9 @@
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('suppliers', {
     id: {
-      primaryKey: true,
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
+      primaryKey: true,
       allowNull: false,
     },
     supplierId: {
