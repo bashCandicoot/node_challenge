@@ -1,10 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
-  const Users = sequelize.define('users', {
+  const User = sequelize.define('users', {
     id: {
-      allowNull: false,
-      primaryKey: true,
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+      allowNull: false,
     },
     userId: {
       type: DataTypes.INTEGER,
@@ -64,5 +64,5 @@ module.exports = (sequelize, DataTypes) => {
   //   console.log(models);
   //   // associations can be defined here
   // };
-  return Users;
+  return User;
 };
