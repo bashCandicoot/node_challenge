@@ -4,7 +4,7 @@ A Node server with a REST api that meets the acceptance criteria of the user sto
 
 Setup:
 
-```cd``` to server directory
+```cd server```  
 
 ```npm install``` 
 
