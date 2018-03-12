@@ -35,8 +35,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           len: {
-            args: [0, 20],
-            msg: 'The town name must be no longer than 20 characters.',
+            args: [0, 30],
+            msg: 'The town name must be no longer than 30 characters.',
           },
         },
       },
@@ -52,14 +52,14 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      classMethods: {
-        associate: (models) => {
-          Address.belongsTo(models.Supplier, {
-            foreignKey: 'supplierId',
-            onDelete: 'CASCADE',
-          });
-        },
-      },
+      // classMethods: {
+      //   associate: (models) => {
+      //     Address.belongsTo(models.Supplier, {
+      //       foreignKey: 'supplierId',
+      //       onDelete: 'CASCADE',
+      //     });
+      //   },
+      // },
     },
   );
   return Address;
