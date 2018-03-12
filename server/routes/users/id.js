@@ -6,5 +6,5 @@ module.exports = (req, res) => {
       userId: req.params.id,
     },
   })
-    .then(users => res.status(200).json({ users }));
+    .then(user => res.status(200).json({ user }));
 };
