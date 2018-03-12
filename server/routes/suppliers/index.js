@@ -3,6 +3,6 @@ const all = require('./all');
 const id = require('./id');
 
 suppliers.get('/', all);
-suppliers.get('/id/:id', id);
+suppliers.get('/:id', id);
 
 module.exports = suppliers;
